@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(
+      90deg,
+      #24c6c8 0%,
+      #3199b5 35%,
+      #31528f 65%,
+      #2d0b6b 100%
+    );
+    color: white;
+    padding-top: 20px;
+  }
+  
+  #name {
+    text-align: center;
+    font-size: 42px;
+    margin: 0 0 30px;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  }
+  
+  #weather-container {
+    width: 54%;
+    max-width: 900px;
+    min-width: 650px;
+    margin: 0 auto;
+    padding: 25px 50px;
+    background: rgba(70, 115, 180, 0.55);
+    border-radius: 15px;
+    box-shadow:
+      0 8px 20px rgba(0, 0, 0, 0.3),
+      0 0 15px rgba(100, 190, 220, 0.25);
+  }
+  
+  #location-form {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  #location-input {
+    flex: 1;
+    height: 46px;
+    padding: 0 14px;
+    border: none;
+    border-radius: 5px;
+    background: white;
+    color: #333;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  #location-input::placeholder {
+    color: #777;
+  }
+  
+  #location-form button {
+    width: 250px;
+    height: 46px;
+    border: none;
+    border-radius: 5px;
+    background: #ff4b32;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  #location-form button:hover {
+    background: #f13b22;
+  }
+  
+  #weather-data {
+    margin-top: 25px;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+  }
+  
+  @media (max-width: 768px) {
+    #weather-container {
+      width: 90%;
+      min-width: 0;
+      padding: 20px;
+    }
+  
+    #location-form {
+      flex-direction: column;
+    }
+  
+    #location-input,
+    #location-form button {
+      width: 100%;
+    }
+  
+    #name {
+      font-size: 34px;
+    }
+  }
+  #location-form {
+    position: relative;
+  }
+  
+  #suggestions {
+    position: absolute;
+    top: 46px;
+    left: 0;
+    width: calc(100% - 258px);
+    background: white;
+    color: #333;
+    border-radius: 0 0 5px 5px;
+    overflow: hidden;
+    z-index: 1000;
+  }
+  
+  .suggestion-item {
+    padding: 12px 14px;
+    font-size: 16px;
+    text-align: left;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .suggestion-item:hover {
+    background: #f2f2f2;
+  }
+
+  #clear-suggestions {
+    position: absolute;
+    display: none;
+    top: 46px;
+    right: 258px;
+    width: 40px !important;
+    height: 40px !important;
+    padding: 0 !important;
+    border: none !important;
+    background: transparent !important;
+    color: #777 !important;
+    font-size: 22px !important;
+    font-weight: normal !important;
+    cursor: pointer;
+    z-index: 1002;
+    box-shadow: none !important;
+  }
+  
+  #clear-suggestions:hover {
+    background: transparent !important;
+    color: #333 !important;
+  }
